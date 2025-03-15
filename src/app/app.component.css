@@ -1,0 +1,64 @@
+h1{
+  color: white;
+  font-weight: bold;
+}
+
+.logo-container{
+  display: inline-block;
+  background-color: #3f51b5;
+  padding: 10px 50px;
+  text-align: center;
+  height: 100%;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  background-color: #3f3f3f; 
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  max-width: 50%;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover{
+  color: #ffcc00;
+}
+
+footer {
+  background-color: #3f51b5;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center; 
+  gap: 1rem;
+}
+
+footer a, 
+footer p {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}

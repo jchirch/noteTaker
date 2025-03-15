@@ -1,4 +1,23 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<header>
+  <div class="logo-container">
+    <h1 class="header">Note</h1>
+    <h1 class="header">Taker</h1>
+  </div>
+  <nav>
+    <a routerLink="/">Home</a>
+    <a routerLink="/dashboard">Dashboard</a>
+    <a routerLink="/dashboard/notes">All Notes</a>
+    <a routerLink="/dashboard/new">Create Note</a>
+  </nav>
+</header>
+<router-outlet></router-outlet>
+<footer>
+  <p>Created by Joe Chirchirillo</p>
+  <a href="https://www.linkedin.com/in/joechirchirillo/" target="_blank">LinkedIn</a>
+  <a href="https://github.com/joechirchirillo" target="_blank">GitHub</a>
+  <a href="https://github.com/jchirch/noteTaker" target="_blank">App Repo</a>
+</footer> 
+
 <!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
 <!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
 <!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->
@@ -6,8 +25,8 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-<style>
+<!-- <router-outlet></router-outlet> -->
+<!-- <style>
   :host {
     --bright-blue: oklch(51.01% 0.274 263.83);
     --electric-violet: oklch(53.18% 0.28 296.97);
@@ -322,7 +341,8 @@
       </div>
     </div>
   </div>
-</main>
+</main> -->
+<!-- <router-outlet /> -->
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
@@ -331,6 +351,3 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-
-<router-outlet />
