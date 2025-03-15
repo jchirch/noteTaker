@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   standalone: true,
@@ -9,5 +10,10 @@ import { CommonModule } from '@angular/common';
   styleUrl: './landing.component.css'
 })
 export class LandingComponent {
+  constructor(private router: Router) {}
+
+  navigateToDashboard() {
+    this.router.navigate(['/dashboard']);
+  }
 
 }

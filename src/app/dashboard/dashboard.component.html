@@ -1,9 +1,11 @@
 <div class="dashboard-container">
 
   <h2>Dashboard</h2>
+  <p>You have {{ notesCount }} notes</p>
+  <p>You have {{ subjectsCount }} subjects</p>
   <nav>
-    <a routerLink="all">All Notes</a>
-    <a routerLink="new">Create New</a>
+    <a routerLink="/dashboard/all">View All Notes</a>
+    <a routerLink="/dashboard/new">Create a New Note</a>
   </nav>
   <!-- <router-outlet></router-outlet> -->
 </div>

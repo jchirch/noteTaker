@@ -1,0 +1,51 @@
+.landing-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  display: flexbox;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #3f51b5; 
+}
+
+p {
+  font-size: 1.2rem;
+  color: #5d5d5d;
+}
+
+.features {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+}
+
+.feature-card {
+  background: #f5f5f5;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 30%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card h2 {
+  font-size: 1.5rem;
+  color: #3f51b5;
+}
+
+.cta-button {
+  display: inline-block;
+  background: #3f51b5;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+.cta-button:hover {
+  background: #303f9f;
+}

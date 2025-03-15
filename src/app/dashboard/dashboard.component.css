@@ -1,0 +1,16 @@
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.nav-link {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: #3f51b5;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
