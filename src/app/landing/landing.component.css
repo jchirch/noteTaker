@@ -1,14 +1,15 @@
 .landing-container {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 2rem auto;
   padding: 2rem;
   text-align: center;
-  display: flexbox;
+  display: block;
 }
 
 h1 {
   font-size: 2.5rem;
   color: #3f51b5; 
+  margin-bottom: 1rem;
 }
 
 p {
@@ -47,5 +48,9 @@ p {
 }
 
 .cta-button:hover {
-  background: #303f9f;
+  transition: 0.3s ease;
+  background: white;
+  color: #3f51b5;
+  border-color: #3f51b5;
+  cursor: pointer;
 }

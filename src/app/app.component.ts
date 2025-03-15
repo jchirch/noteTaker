@@ -20,6 +20,12 @@ import { RouterModule } from '@angular/router';
       </nav>
     </header>
     <router-outlet></router-outlet>
+    <footer>
+      <p>Created by Joe Chirchirillo</p>
+      <a href="https://www.linkedin.com/in/joechirchirillo/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/joechirchirillo" target="_blank">GitHub</a>
+      <a href="https://github.com/jchirch/noteTaker" target="_blank">App Repo</a>
+    </footer> 
   `,
   styleUrls: ['./app.component.css']
 })

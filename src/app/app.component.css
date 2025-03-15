@@ -36,3 +36,29 @@ nav a {
 nav a:hover{
   color: #ffcc00;
 }
+
+footer {
+  background-color: #3f51b5;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center; 
+  gap: 1rem;
+}
+
+footer a, 
+footer p {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
