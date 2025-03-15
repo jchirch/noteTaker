@@ -15,5 +15,4 @@ export class LandingComponent {
   navigateToDashboard() {
     this.router.navigate(['/dashboard']);
   }
-
 }
