@@ -12,8 +12,6 @@ import { RouterModule } from '@angular/router';
         <h1 class="header">Note</h1>
         <h1 class="header">Taker</h1>
       </div>
-      <!-- <div class="spacer">
-      </div> -->
       <nav>
         <a routerLink="/">Home</a>
         <a routerLink="/dashboard">Dashboard</a>
@@ -26,18 +24,3 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent { }
-
-
-// import { Component } from '@angular/core';
-// import { RouterOutlet } from '@angular/router';
-
-// @Component({
-//   standalone: true,
-//   selector: 'app-root',
-//   imports: [RouterOutlet],
-//   templateUrl: './app.component.html',
-//   styleUrl: './app.component.css'
-// })
-// export class AppComponent {
-//   title = 'note-taker';
-// }

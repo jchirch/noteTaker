@@ -1,7 +1,5 @@
 h1{
   color: white;
-  /* margin: 0; */
-  /* font-size: 20px; */
   font-weight: bold;
 }
 
@@ -38,7 +36,3 @@ nav a {
 nav a:hover{
   color: #ffcc00;
 }
-
-/* .spacer{
-  flex: 1;
-} */
