@@ -1,0 +1,56 @@
+h2 {
+  font-size: 2.5rem;
+  color: #3f51b5; 
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+
+.note-list-container {
+  max-width: 85%;
+  margin: 4rem auto 2rem; 
+  padding: 1rem;
+}
+
+.note-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  gap: 1rem;
+  margin-top: 3rem; 
+}
+
+.note-card {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.note-card:hover{
+  box-shadow: 5px 3px 3px #ffcc00;
+  transform: scale(1.1);
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+
+.note-card h3 {
+  margin: 0 0 0.5rem 0;
+  color: #3f51b5;
+}
+
+.note-card p {
+  margin: 0 0 0.5rem 0;
+  color: #555;
+}
+
+.note-card small {
+  color: #888;
+  align-self: flex-end;
+}
+
+.error-message {
+  color: #d32f2f;
+  font-weight: bold;
+}

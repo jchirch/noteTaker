@@ -3,7 +3,7 @@
 
   <p *ngIf="errorMessage" class="error-message">{{errorMessage}}</p>
   
-  <div *ngIf="notes.length > 0; else noNotes">
+  <div *ngIf="notes.length > 0; else noNotes" class="note-list">
     <div *ngFor="let note of notes" class="note-card">
       <h3>{{ note.title }}</h3>
       <p>{{ note.content }}</p>
