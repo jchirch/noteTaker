@@ -1,2 +1,17 @@
-<h3>All Notes</h3>
-<p>This is where all notes will be displayed.</p>
+<div class="note-list-container">
+  <h2>All Notes</h2>
+
+  <p *ngIf="errorMessage" class="error-message">{{errorMessage}}</p>
+  
+  <div *ngIf="notes.length > 0; else noNotes" class="note-list">
+    <div *ngFor="let note of notes" class="note-card">
+      <h3>{{ note.title }}</h3>
+      <p>{{ note.content }}</p>
+      <small>Created: {{ note.created_at | date }}</small>
+    </div>
+  </div>
+
+  <ng-template #noNotes>
+    <p>No notes found.</p>
+  </ng-template>
+</div>

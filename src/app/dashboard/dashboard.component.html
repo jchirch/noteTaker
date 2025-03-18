@@ -1,10 +1,26 @@
 <div class="dashboard-container">
-
   <h2>Dashboard</h2>
-  <p>You have {{ notesCount }} notes</p>
-  <p>You have {{ subjectsCount }} subjects</p>
+
+<!-- if error message is set, display error message -->
+  <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p> 
+
+<!-- if notes count has been fetched, display -->
+  <p *ngIf="notesCount !== null; else loadingNotes">
+    You have {{ notesCount }} notes.
+  </p>
+  <ng-template #loadingNotes>
+    <p>Loading notes count...</p>
+  </ng-template>
+
+  <p *ngIf="subjectsCount !== null; else loadingSubjects">
+    You have {{ subjectsCount }} subjects.
+  </p>
+  <ng-template #loadingSubjects>
+    <p>Loading subjects count...</p>
+  </ng-template>
+
   <nav>
-    <a routerLink="/dashboard/all">View All Notes</a>
+    <a routerLink="/dashboard/notes">View All Notes</a>
     <a routerLink="/dashboard/new">Create a New Note</a>
   </nav>
 </div>
