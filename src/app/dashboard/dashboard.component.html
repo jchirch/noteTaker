@@ -19,8 +19,13 @@
     <p>Loading subjects count...</p>
   </ng-template>
 
-  <nav>
+  <div class="button-container">
+    <button (click)="navigateToAllNotes()" class="nav-button">See All Notes</button>
+    <button (click)="navigateToCreateNote()" class="nav-button">New Note</button>
+  </div>
+
+  <!-- <nav>
     <a routerLink="/dashboard/notes">View All Notes</a>
     <a routerLink="/dashboard/new">Create a New Note</a>
-  </nav>
+  </nav> -->
 </div>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core'; // angular features to define components/hook runs when componenet initialized
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
 import { DashboardService } from '../services/dashboard.service'; // service handles api calls for notes/subjects
 import { CommonModule } from '@angular/common'; // directives ngIf/ngFor
 
@@ -16,10 +16,18 @@ export class DashboardComponent implements OnInit {
   errorMessage: string | null = null;
 
   //dependency injection!
-  constructor(private dashboardService: DashboardService) {} //injects dashboard service and its helper methods
+  constructor(private router: Router, private dashboardService: DashboardService) {} //injects dashboard service and its helper methods
 
   ngOnInit(): void { //upon initialization, invoke fetchcounts()
     this.fetchCounts();
+  }
+
+  navigateToAllNotes(){
+    this.router.navigate(['/dashboard/notes'])
+  }
+
+  navigateToCreateNote(){
+    this.router.navigate(['/dashboard/new'])
   }
 
   fetchCounts(): void {
