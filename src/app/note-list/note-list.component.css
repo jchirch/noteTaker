@@ -3,10 +3,13 @@ h2 {
   color: #3f51b5; 
   margin-bottom: 1rem;
   margin-left: 1rem;
+  top: 0; 
+  left: 0; 
+  margin: 1rem; 
 }
 
 .note-list-container {
-  max-width: 85%;
+  max-width: 90%;
   margin: 4rem auto 2rem; 
   padding: 1rem;
 }
