@@ -1,0 +1,23 @@
+.create-container {
+  /* max-width: 800px; */
+  max-width: 90%;
+
+  margin: 4rem auto 2rem;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: #3f51b5; 
+  margin-bottom: 1rem;
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  margin: 1rem; 
+}
