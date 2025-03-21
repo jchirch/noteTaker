@@ -22,4 +22,8 @@ export class NoteService {
   getAllNotes(): Observable<Note[]> { //function return an observable object
     return this.http.get<Note[]>(`${this.apiUrl}/notes`); // returns {count: ###} from apiURL route request
   }
+
+  createNote(newNote): Observable<Note> {
+    return this.http.post<Note>(`${this.apiUrl}/notes`, newNote)  ;
+  }
 }
