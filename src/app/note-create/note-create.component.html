@@ -1,5 +1,31 @@
 <div class="create-container">
 
   <h2>Create New Note</h2>
-  <p>This is where you can create new notes.</p>
+  <!-- connects form to noteForm object in typescript file. Formgroup tells angular this is a reacive form -->
+   <!-- ngSubmit tells angular to call on submit function -->
+  <form [formGroup]="noteForm" (ngSubmit)="onSubmit()"> 
+    <div class="form-container"> 
+      <!-- associates label with input field -->
+      <label for="title">Title</label>
+      <input id="title" formControlName="title" type="text" />
+      <!-- error if user submits empty/invalid data  -->
+      <div *ngIf="noteForm.get('title')?.invalid && noteForm.get('title')?.touched" class="error">
+        Note must have a title.
+      </div>
+    </div>
+
+    <div class="form-container">
+      <label for="content">Content</label>
+      <textarea id="content" formControlName="content"></textarea>
+      <div *ngIf="noteForm.get('content')?.invalid && noteForm.get('content')?.touched" class="error">
+        Note must have content.
+      </div>
+    </div>
+
+    <button type="submit" class="submit-button">Create Note</button>
+    <!-- <button type="submit" [disabled]="noteForm.invalid">Create Note</button> -->
+
+    <!-- error message handling -->
+    <p *ngIf="errorMsg" class="error-message">{{ errorMsg }}</p>
+  </form>
 </div>

@@ -1,8 +1,9 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Injectable } from '@angular/core'; // allows class to be injected
+import { HttpClient } from '@angular/common/http'; // allows us to make http requests
+import { Observable } from 'rxjs'; // works with async data, like http responses
 
 export interface Note { // interface defines structure of an object (Note). like a serializer?
+  // lets typescript know the strucutr and datatype of a Note object
   id: number;
   title: string;
   content: string;
@@ -10,7 +11,7 @@ export interface Note { // interface defines structure of an object (Note). like
   updated_at: string;
 }
 
-@Injectable({
+@Injectable({ // ensures service is global (root)
   providedIn: 'root'
 })
 
@@ -23,7 +24,11 @@ export class NoteService {
     return this.http.get<Note[]>(`${this.apiUrl}/notes`); // returns {count: ###} from apiURL route request
   }
 
-  createNote(newNote): Observable<Note> {
+  createNote(newNote: Note): Observable<Note> { //newNote follows note interface as a templete
     return this.http.post<Note>(`${this.apiUrl}/notes`, newNote)  ;
   }
+
+  // takes a newNote object that matches Note interface
+  // sends post request to api url with newNote as request body
+  // returns observable from result of api response
 }
