@@ -5,22 +5,31 @@
   <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p> 
 
 <!-- if notes count has been fetched, display -->
+ <div class="welcome-container">
+
+ 
   <p *ngIf="notesCount !== null; else loadingNotes">
-    You have {{ notesCount }} notes.
+    You have {{ notesCount }} notes, click "New Note" to make some more!
   </p>
   <ng-template #loadingNotes>
     <p>Loading notes count...</p>
   </ng-template>
 
   <p *ngIf="subjectsCount !== null; else loadingSubjects">
-    You have {{ subjectsCount }} subjects.
+    You have {{ subjectsCount }} subjects, expand your knowledge by researching more.
   </p>
   <ng-template #loadingSubjects>
     <p>Loading subjects count...</p>
   </ng-template>
+</div>
 
-  <nav>
+  <div class="button-container">
+    <button (click)="navigateToAllNotes()" class="nav-button">See Notes</button>
+    <button (click)="navigateToCreateNote()" class="nav-button">New Note</button>
+  </div>
+
+  <!-- <nav>
     <a routerLink="/dashboard/notes">View All Notes</a>
     <a routerLink="/dashboard/new">Create a New Note</a>
-  </nav>
+  </nav> -->
 </div>

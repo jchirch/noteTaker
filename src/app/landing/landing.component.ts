@@ -13,6 +13,6 @@ export class LandingComponent {
   constructor(private router: Router) {}
 
   navigateToDashboard() {
-    this.router.navigate(['/dashboard']);
+    this.router.navigate(['/dashboard'])
   }
 }
