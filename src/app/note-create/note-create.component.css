@@ -1,5 +1,4 @@
 .create-container {
-  /* max-width: 800px; */
   max-width: 90%;
 
   margin: 4rem auto 2rem;
@@ -20,4 +19,67 @@ h2 {
   top: 0; 
   left: 0; 
   margin: 1rem; 
+}
+
+.submit-button {
+  display: inline-block;
+  background: #3f51b5;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  margin: 1rem;
+}
+
+.submit-button:hover {
+  transition: 0.3s ease;
+  background: white;
+  color: #3f51b5;
+  border-color: #3f51b5;
+  cursor: pointer;
+}
+
+.form-container {
+  max-width: 1000px;
+  margin: 4rem auto;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 2px solid #3f51b5;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+input {
+  width: 99%;
+}
+
+.form-title,
+.form-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+label {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #3f51b5;
+}
+
+#content {
+  font-family: Arial;
+  height: 100px;
+  width: 800px;
+  padding: 10px;
+  border-radius: 4px;
 }
