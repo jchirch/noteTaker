@@ -28,6 +28,10 @@ export class NoteService {
     return this.http.post<Note>(`${this.apiUrl}/notes`, newNote)  ;
   }
 
+  deleteNote(noteId: number): Observable<void> { 
+    return this.http.delete<void>(`${this.apiUrl}/notes/${noteId}`); //calls on observable, http action, delete, then the route
+  }
+
   // takes a newNote object that matches Note interface
   // sends post request to api url with newNote as request body
   // returns observable from result of api response

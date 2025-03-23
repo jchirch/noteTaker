@@ -7,7 +7,10 @@
     <div *ngFor="let note of notes" class="note-card">
       <h3>{{ note.title }}</h3>
       <p>{{ note.content }}</p>
-      <small>Created: {{ note.created_at | date }}</small>
+      <div class="card-row-bottom">
+        <button (click)="deleteNote(note.id)" class="delete-button">Delete</button>
+        <small>Created: {{ note.created_at | date }}</small>
+      </div>
     </div>
   </div>
 
