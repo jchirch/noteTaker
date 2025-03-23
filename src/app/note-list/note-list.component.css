@@ -12,6 +12,7 @@ h2 {
   max-width: 90%;
   margin: 4rem auto 2rem; 
   padding: 1rem;
+  min-height: 100vh;
 }
 
 .note-list {

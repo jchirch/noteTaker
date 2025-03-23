@@ -24,9 +24,14 @@ The application will automatically reload whenever any source files are modified
 - e2e testing with Cypress
 - Unit testing with Karma || Jasmine
 
+## Preview
+![Animation Preview](./src/assets/gifs/NoteTakerDemo.gif)
+
 ## Screenshots
 
-
+![screenshot of dashboard](./src/assets/images/dashboard.png)
+![screenshot of all notes](./src/assets/images/index-notes.png)
+![screenshot of note creation](./src/assets/images/create-note.png)
 
 ## Accessibility
 - Scored 100% using Lighthouse accessibility audit!
