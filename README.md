@@ -1,59 +1,39 @@
 # NoteTaker
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.1.
+NoteTaker is a simple note-taking app built with Angular as a way to document my learning journey with the framework. Each note represents something I learned about Angular while building this app. The goal was to familiarize myself with a new framework, implement CRUD functionality to create a simple MVP, and explore best practices along the way.
 
-## Development server
+## Getting Started
+### Backend Setup
+This app pairs with a Rails API backend, [note_taker_api](https://github.com/jchirch/note_taker_api). 
+To start the Rails server, run `rails server` and ensure the API runs on `http://localhost:3000/`.
 
-To start a local development server, run:
+### Development server
 
-```bash
-ng serve
-```
+To start the Angular development server, run `ng serve`, open browser, and navigate to `http://localhost:4200/`.
+The application will automatically reload whenever any source files are modified.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Features
+- View all notecards
+- Create new note
+- Delete note
+- Dashboard with real-time database updates
 
-## Code scaffolding
+## Future Features
+- Show single note
+- Update/Edit a note
+- e2e testing with Cypress
+- Unit testing with Karma || Jasmine
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Screenshots
 
-```bash
-ng generate component component-name
-```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
 
-```bash
-ng generate --help
-```
+## Accessibility
+- Scored 100% using Lighthouse accessibility audit!
+- Fully tabbable interface
+- Descriptive class names and HTML element tags for screen readers
+- Good color contrast in styling
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Tech 
+- Angular 19.2.1
+- Cypress 3.0.0
