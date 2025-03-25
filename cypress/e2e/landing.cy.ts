@@ -29,6 +29,8 @@ describe('Landing Page', () => {
 
   it('displays footer nav links', () => {
     cy.get('footer a').eq(0).should('have.text', 'LinkedIn').and('have.attr', 'href', 'https://www.linkedin.com/in/joechirchirillo/')
+    cy.get('footer a').eq(1).should('have.text', 'GitHub').and('have.attr', 'href', 'https://github.com/joechirchirillo')
+    cy.get('footer a').eq(2).should('have.text', 'App Repo').and('have.attr', 'href', 'https://github.com/jchirch/noteTaker')
   })
 
 
