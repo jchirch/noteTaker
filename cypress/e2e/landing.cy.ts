@@ -11,6 +11,27 @@ describe('Landing Page', () => {
     cy.get('.cta-button').should('exist').and('contain', 'Get Started')
   })
 
+  it('displays header elements', () => {
+    cy.get('.logo-container h1').first().should('have.text', 'Note')
+    cy.get('.logo-container h1').last().should('have.text', 'Taker')
+  })
+
+  it('displays header nav links', () => {
+    cy.get('nav a').eq(0).should('have.text', 'Home').and('have.attr', 'routerLink', '/')
+    cy.get('nav a').eq(1).should('have.text', 'Dashboard').and('have.attr', 'routerLink', '/dashboard')
+    cy.get('nav a').eq(2).should('have.text', 'All Notes').and('have.attr', 'routerLink', '/dashboard/notes')
+    cy.get('nav a').eq(3).should('have.text', 'Create Note').and('have.attr', 'routerLink', '/dashboard/new')
+  })
+
+  it('displays footer elements', () => {
+    cy.get('footer p').should('contain', 'Created by Joe Chirchirillo')
+  })
+
+  it('displays footer nav links', () => {
+    cy.get('footer a').eq(0).should('have.text', 'LinkedIn').and('have.attr', 'href', 'https://www.linkedin.com/in/joechirchirillo/')
+  })
+
+
   it('navigates to dashboard', () => {
     cy.intercept('GET', '/dashboard', {
       statusCode: 200,
