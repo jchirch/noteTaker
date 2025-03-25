@@ -1,0 +1,7 @@
+{
+    "message": "Dashboard was loaded successfully",
+    "user": {
+        "name": "Test User",
+        "email": "test@example.com"
+    }
+}
