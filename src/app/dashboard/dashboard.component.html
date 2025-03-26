@@ -7,7 +7,6 @@
 <!-- if notes count has been fetched, display -->
  <div class="welcome-container">
 
- 
   <p *ngIf="notesCount !== null; else loadingNotes">
     You have {{ notesCount }} notes, click "New Note" to make some more!
   </p>
@@ -27,9 +26,4 @@
     <button (click)="navigateToAllNotes()" class="nav-button">See Notes</button>
     <button (click)="navigateToCreateNote()" class="nav-button">New Note</button>
   </div>
-
-  <!-- <nav>
-    <a routerLink="/dashboard/notes">View All Notes</a>
-    <a routerLink="/dashboard/new">Create a New Note</a>
-  </nav> -->
 </div>
