@@ -53,20 +53,41 @@ describe('Sad Paths', () => {
     cy.get('.welcome-container p').eq(1).should('contain', 'Loading subjects count...')
   })
 
-  it('displays error message', () => {
+  it('displays error message for failure loading subject count', () => {
     cy.intercept('GET', 'http://localhost:3000/api/v1/notes/count', {
-      statusCode: 500,
-      body: { error: "Server error" }
+      statusCode: 200,
+      body: { count: 123 }
     }).as('getNotesCount')
-
+  
     cy.intercept('GET', 'http://localhost:3000/api/v1/subjects/count', {
       statusCode: 500,
       body: { error: "Server error" }
     }).as('getSubjectsCount')
-
+  
     cy.visit('http://localhost:4200') 
     cy.get('.cta-button').click()
- 
+  
+    cy.wait(['@getNotesCount', '@getSubjectsCount'])
+  
+    cy.get('.error-message').should('exist').and('contain', 'Failure loading subject count.')
+  })
+
+  it('displays error message for failure loading note count', () => {
+    cy.intercept('GET', 'http://localhost:3000/api/v1/notes/count', {
+      statusCode: 500,
+      body: { error: "Server error" }
+    }).as('getNotesCount')
+  
+    cy.intercept('GET', 'http://localhost:3000/api/v1/subjects/count', {
+      statusCode: 200,
+      body: { count: 123 }
+    }).as('getSubjectsCount')
+  
+    cy.visit('http://localhost:4200') 
+    cy.get('.cta-button').click()
+  
+    cy.wait(['@getNotesCount', '@getSubjectsCount'])
+  
     cy.get('.error-message').should('exist').and('contain', 'Failure loading note count.')
   })
 })
