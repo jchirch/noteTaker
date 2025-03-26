@@ -34,7 +34,6 @@ describe('Landing Page', () => {
     cy.get('footer a').eq(2).should('have.text', 'App Repo').and('have.attr', 'href', 'https://github.com/jchirch/noteTaker')
   })
 
-
   it('navigates to dashboard', () => {
     cy.intercept('GET', '/dashboard', {
       statusCode: 200,
