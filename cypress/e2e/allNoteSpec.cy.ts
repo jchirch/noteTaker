@@ -27,11 +27,9 @@ describe('All Notes Page', () => {
 
   it('navigates to all notes page', () => {
     cy.url().should('include', '/dashboard/notes')
-    // cy.wait('@getNotesCount')
-    // cy.wait('@getSubjectsCount')
   })
 
-  it('displays All Notes elements', () => {
+  it('displays all All Notes page elements', () => {
     cy.wait('@noteList')
     cy.get('h2').should('contain', 'All Notes')
     cy.get('.note-list-container').should('exist')
