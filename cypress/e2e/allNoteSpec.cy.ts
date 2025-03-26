@@ -49,12 +49,20 @@ describe('All Notes Page', () => {
   })
 
   it('can delete a note', () => {
+    cy.intercept('DELETE', 'http://localhost:3000/api/v1/notes/*', {
+      statusCode: 200,
+      body: { message: 'Note deleted successfully' }
+    }).as('deleteNote')
+
     cy.wait('@noteList')
     cy.get('h2').should('contain', 'All Notes')
     cy.get('.note-list-container').should('exist')
     cy.get('.note-card').should('have.length', 4) 
 
-    cy.get('.note-card').eq(3).get('.delete-button').click()
+    cy.get('.note-card').eq(3).find('.delete-button').click()
+    cy.wait('@deleteNote')
+
+    cy.get('.note-card').should('have.length', 3) 
   })
 })
 
