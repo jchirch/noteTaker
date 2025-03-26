@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "title": "example 1",
+    "content": "Lorem ipsum dolor sit amet"
+  },
+  {
+    "id": 2,
+    "title": "example 2",
+    "content": "Lorem ipsum dolor sit amet"
+  },
+  {
+    "id": 3,
+    "title": "example 3",
+    "content": "Lorem ipsum dolor sit amet"
+  },
+  {
+    "id": 4,
+    "title": "example 4",
+    "content": "Lorem ipsum dolor sit amet"
+  }
+]
