@@ -25,7 +25,7 @@ export class NoteService {
   }
 
   showNote(noteId: number): Observable<Note> {
-    return this.http.get<Note>(`${this.apiUrl}/notes/show/${noteId}`)
+    return this.http.get<Note>(`${this.apiUrl}/notes/${noteId}`)
   }
 
   createNote(newNote: Note): Observable<Note> { //newNote follows note interface as a templete

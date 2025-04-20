@@ -25,7 +25,11 @@ export class NoteShowComponent {
     const id = Number(this.route.snapshot.paramMap.get('id'))
 
     this.noteService.showNote(id).subscribe({
-      next: (note) => {this.note = note;},
+      next: (note) => {
+        this.note = note;
+        this.errorMsg = null;
+      },
+
       error: (err) => {
         this.errorMsg = 'Failed to load note.';
         console.log(this.errorMsg)
