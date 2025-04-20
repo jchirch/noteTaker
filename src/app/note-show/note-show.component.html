@@ -1,0 +1,26 @@
+@if (!note && !errorMsg) {
+  <div class="loading-state">
+    <p>Loading note...</p>
+  </div>
+}
+
+@if (errorMsg) {
+  <div class="error-state">
+    <p>{{ errorMsg }}</p>
+  </div>
+}
+
+@if (note) {
+  <div class="note-detail-container">
+      <h2>{{ note.title }}</h2>
+
+      <div class="note-content">
+        <p>{{ note.content }}</p>
+      </div>
+      
+      <div class="note-times">
+        <p>Created: {{ note.created_at | date:'mediumDate' }}</p>
+        <p>Updated: {{ note.updated_at | date:'mediumDate' }}</p>
+      </div>
+  </div>
+}

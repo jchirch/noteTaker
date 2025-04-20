@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
 import { NoteService, Note } from '../services/note.service';
 import { CommonModule } from '@angular/common';
 
@@ -14,7 +14,7 @@ export class NoteListComponent implements OnInit {
   notes: Note[] = [];
   errorMessage: string | null = null;
 
-  constructor(private noteService: NoteService) {} // inject the NoteService
+  constructor(private noteService: NoteService, private router: Router) {} // inject the NoteService
 
   ngOnInit(): void {
     this.fetchNotes(); //when the component initializes, fetch all notes
@@ -42,5 +42,9 @@ export class NoteListComponent implements OnInit {
         this.errorMessage = 'Failed to load notes.';
       },
     });
+  }
+
+  viewNote(noteId: number): void {
+    this.router.navigate(['/dashboard/notes', noteId]);
   }
 }
