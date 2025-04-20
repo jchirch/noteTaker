@@ -1,20 +1,6 @@
-<!-- <div class="show-note-container">
-  <div *ngIf="note" class=""note-container>
-
-    <p>{{note.title}}</p>
-    <div class="note-content">
-     <p>  {{ note.content }} </p>
-    </div>
-  </div>
-  <p>note-show works!</p>
-</div>
-
-<a routerLink="/dashboard/notes" class="back-link">Back to all notes</a> -->
-
 @if (!note && !errorMsg) {
   <div class="loading-state">
-    <span class="spinner"></span>
-    Loading note...
+    <p>Loading note...</p>
   </div>
 }
 
@@ -26,16 +12,15 @@
 
 @if (note) {
   <div class="note-detail-container">
-    <header class="note-header">
-      <h1>{{ note.title }}</h1>
-      <div class="note-meta">
-        <span>Created: {{ note.created_at | date:'mediumDate' }}</span>
-        <span>Updated: {{ note.updated_at | date:'mediumDate' }}</span>
+      <h2>{{ note.title }}</h2>
+
+      <div class="note-content">
+        <p>{{ note.content }}</p>
       </div>
-    </header>
-    
-    <div class="note-content">
-      <p>{{ note.content }}<p>
-    </div>
+      
+      <div class="note-times">
+        <p>Created: {{ note.created_at | date:'mediumDate' }}</p>
+        <p>Updated: {{ note.updated_at | date:'mediumDate' }}</p>
+      </div>
   </div>
 }
