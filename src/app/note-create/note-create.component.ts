@@ -25,9 +25,9 @@ export class NoteCreateComponent {
   }
 
   onSubmit(): void {
-    if (this.noteForm.valid) { //if form is created, proceed
-      this.noteService.createNote(this.noteForm.value).subscribe({ // calls on instance to inject create form function
-        next: () => this.router.navigate(['/dashboard/notes']), // if success, submit form and route to all notes
+    if (this.noteForm.valid) { 
+      this.noteService.createNote(this.noteForm.value).subscribe({ 
+        next: () => this.router.navigate(['/dashboard/notes']), 
         error: (error) => {
           console.log('Error creating new note: ', error)
           this.errorMsg = 'Failure creating new note.'
