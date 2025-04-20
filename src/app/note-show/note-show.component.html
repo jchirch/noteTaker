@@ -1,1 +1,12 @@
-<p>note-show works!</p>
+<div class="show-note-container">
+  <div *ngIf="note" class=""note-container>
+
+    <p>{{note.title}}</p>
+    <div class="note-content">
+     <p>  {{ note.content }} </p>
+    </div>
+  </div>
+  <p>note-show works!</p>
+</div>
+
+<a routerLink="/dashboard/notes" class="back-link">Back to all notes</a>
