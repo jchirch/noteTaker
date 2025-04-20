@@ -24,8 +24,12 @@ export class NoteService {
     return this.http.get<Note[]>(`${this.apiUrl}/notes`); // returns {count: ###} from apiURL route request
   }
 
+  showNote(noteId: number): Observable<Note> {
+    return this.http.get<Note>(`${this.apiUrl}/notes/show/${noteId}`)
+  }
+
   createNote(newNote: Note): Observable<Note> { //newNote follows note interface as a templete
-    return this.http.post<Note>(`${this.apiUrl}/notes`, newNote)  ;
+    return this.http.post<Note>(`${this.apiUrl}/notes`, newNote);
   }
 
   deleteNote(noteId: number): Observable<void> { 
