@@ -9,7 +9,10 @@ h1{
   padding: 10px 50px;
   text-align: center;
   height: 100%;
+  cursor: pointer;
 }
+
+/* .logo-container  */
 
 header{
   display: flex;
